@@ -16,12 +16,12 @@ Arrow::~Arrow()
 
 void Arrow::AttackTarget()
 {
-	cout << "È­»ìÀÌ ÀûÀ» ÇÇ°ÝÇÕ´Ï´Ù!" << endl;
+	cout << "í™”ì‚´ì´ ì ì„ í”¼ê²©í•©ë‹ˆë‹¤!" << endl;
 
-	// °ø°Ý ´ë»óÀÌ ÀÖ´Ù¸é
+	// ê³µê²© ëŒ€ìƒì´ ìžˆë‹¤ë©´
 	if (_target != nullptr)
 	{
-		// µ¥¹ÌÁö¸¦ ÀÔÈù´Ù
+		// ë°ë¯¸ì§€ë¥¼ ìž…ížŒë‹¤
 		_target->AddHp(-_damage);
 		_target->PrintInfo();
 	}

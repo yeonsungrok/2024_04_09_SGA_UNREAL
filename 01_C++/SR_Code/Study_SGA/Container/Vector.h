@@ -4,7 +4,7 @@ template<typename T>
 class Vector
 {
 public:
-	
+
 
 	class Iterator
 	{
@@ -12,17 +12,17 @@ public:
 		Iterator() : ptr(nullptr) {}
 		Iterator(T* otherPtr) : ptr(otherPtr) {}
 
-		// º¹»ç´ëÀÔ»ı¼ºÀÚ
+		// ë³µì‚¬ëŒ€ì…ìƒì„±ì
 		Iterator(const Iterator& other) { ptr = other.ptr; }
 
-		// º¹»ç´ëÀÔ¿¬»êÀÚ
+		// ë³µì‚¬ëŒ€ì…ì—°ì‚°ì
 		Iterator& operator=(const Iterator& other) { ptr = other.ptr; return *this; }
 
-		// != ºñ±³¿¬»êÀÚ
+		// != ë¹„êµì—°ì‚°ì
 		bool operator!=(const Iterator& other) { return ptr != other.ptr; }
 		bool operator==(const Iterator& other) { return ptr == other.ptr; }
 
-		// ++ Áõ°¨¿¬»êÀÚ
+		// ++ ì¦ê°ì—°ì‚°ì
 		Iterator& operator++()
 		{
 			++ptr;
@@ -37,7 +37,7 @@ public:
 			return result;
 		}
 
-		// * °£Á¢¿¬»êÀÚ
+		// * ê°„ì ‘ì—°ì‚°ì
 		T& operator*()
 		{
 			return (*ptr);
@@ -128,7 +128,7 @@ private:
 	unsigned int _size = 0;
 	unsigned int _capacity = 0;
 
-	// ½ÃÀÛÇÏ´Â ¾Ö ÁÖ¼Ò
+	// ì‹œì‘í•˜ëŠ” ì•  ì£¼ì†Œ
 	T* _data = nullptr;
 };
 

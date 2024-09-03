@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-// [사양서] 기본값 Hp=100, Attack=10
+// Hp=100, Attack=10
 Knight::Knight() : _hp(100), _attack(10)
 {
 

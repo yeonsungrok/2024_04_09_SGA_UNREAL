@@ -60,10 +60,10 @@ void Player::OnDamaged(Player* attacker)
 	if (IsDead())
 		return;
 
-	// 내 체력 깎는다
+	
 	int damage = attacker->GetAttackDamage();
 	AddHp(-damage);
 
-	// 반격!
+	
 	attacker->OnDamaged(this);
 }

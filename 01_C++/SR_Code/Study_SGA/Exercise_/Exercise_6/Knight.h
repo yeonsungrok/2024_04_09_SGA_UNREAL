@@ -14,12 +14,12 @@ public:
 
 	int GetAttackDamage();
 
-	void OnDamaged(Knight* attacker, bool isCounterAttack = false); // ÇÔ¼ö¿¡ ¹Ý°Ý¿©ºÎ Ãß°¡
+	void OnDamaged(Knight* attacker, bool isCounterAttack = false); // ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ý°Ý¿ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 
 public:
 	int _hp;
 	int _maxHp;
 	int _attack;
-	bool _isCounterAttack;  // ¹Ý°Ý ¿©ºÎ
+	bool _isCounterAttack;  
 };
 

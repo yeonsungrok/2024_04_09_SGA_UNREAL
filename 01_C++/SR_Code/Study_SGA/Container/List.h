@@ -26,17 +26,17 @@ public:
 		Iterator() : nodePtr(nullptr) {}
 		Iterator(Node<T>* otherPtr) : nodePtr(otherPtr) {}
 
-		// º¹»ç´ëÀÔ»ı¼ºÀÚ
+		// ë³µì‚¬ëŒ€ì…ìƒì„±ì
 		Iterator(const Iterator& other) { nodePtr = other.nodePtr; }
 
-		// º¹»ç´ëÀÔ¿¬»êÀÚ
+		// ë³µì‚¬ëŒ€ì…ì—°ì‚°ì
 		Iterator& operator=(const Iterator& other) { nodePtr = other.nodePtr; return *this; }
 
-		// != ºñ±³¿¬»êÀÚ
+		// != ë¹„êµì—°ì‚°ì
 		bool operator!=(const Iterator& other) { return nodePtr != other.nodePtr; }
 		bool operator==(const Iterator& other) { return nodePtr == other.nodePtr; }
 
-		// ++ Áõ°¨¿¬»êÀÚ
+		// ++ ì¦ê°ì—°ì‚°ì
 		Iterator& operator++()
 		{
 			nodePtr = nodePtr->next;
@@ -52,7 +52,7 @@ public:
 			return result;
 		}
 
-		// * °£Á¢¿¬»êÀÚ
+		// * ê°„ì ‘ì—°ì‚°ì
 		T& operator*()
 		{
 			return (*nodePtr).data;

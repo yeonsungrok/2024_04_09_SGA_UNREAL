@@ -6,14 +6,13 @@ Archer::Archer(Pet* pet) : _pet(pet)
 	
 }
 
-Archer::Archer(int hp) : Player(hp), _pet(nullptr)     // pet nullptr·Î Ãß°¡
+Archer::Archer(int hp) : Player(hp), _pet(nullptr)     // pet nullptrï¿½ï¿½ ï¿½ß°ï¿½
 {
 }
 
 Archer::~Archer()
 {
-	// ¿ÜºÎ¿¡¼­ »èÁ¦ÇßÀ½
-	// Áñ°Å¿ü´Ù ³» Æê :(
+	
 	/*if (_pet != nullptr)
 		delete _pet;*/
 }

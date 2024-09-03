@@ -3,20 +3,19 @@
 
 Archer::Archer()
 {
-	// ÀÌ·± Àú·± Á¤º¸ Ã¤¿ï ¿¹Á¤~
-	_pet = new Pet(); // µ¿ÀûÇÒ´ç
+	// ì´ëŸ° ì €ëŸ° ì •ë³´ ì±„ìš¸ ì˜ˆì •~
+	_pet = new Pet();
 }
 
 Archer::Archer(int hp) : Player(hp)
 {
-	// ÀÌ·± Àú·± Á¤º¸ Ã¤¿ï ¿¹Á¤~
+	// ì´ëŸ° ì €ëŸ° ì •ë³´ ì±„ìš¸ ì˜ˆì •~
 	_pet = new Pet();
 }
 
 Archer::~Archer()
 {
-	// Áñ°Å¿ü´Ù ³» Æê :(
-	if (_pet != nullptr)    // È£ÃâÀÌ ¾ÈµÊ - ¼Ò¸êÀÚ°¡...
+	// ì¦ê±°ì› ë‹¤ ë‚´ í« :(
+	if (_pet != nullptr)
 		delete _pet;
 }
-

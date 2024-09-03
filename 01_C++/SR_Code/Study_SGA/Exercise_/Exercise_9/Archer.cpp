@@ -12,7 +12,6 @@ Archer::Archer(int hp) : Player(hp), _pet(nullptr)
 
 Archer::~Archer()
 {
-	// Áñ°Å¿ü´Ù ³» Æê :(
 	_pet = nullptr;
 }
 
@@ -20,10 +19,10 @@ void Archer::AddHp(int value)
 {
 	Player::AddHp(value);
 
-	// Á×¾úÀ¸¸é Æêµµ ³¯¸°´Ù
+	// ï¿½×¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½êµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	if (IsDead())
 	{
-		// Á×¾úÀ¸¸é Áö¿ì´Â°Ô ¾Æ´Ï¶ó nullptr·Î ³¯¸°°Í
+		// ï¿½×¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Ï¶ï¿½ nullptrï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		_pet = nullptr;
 	}
 }

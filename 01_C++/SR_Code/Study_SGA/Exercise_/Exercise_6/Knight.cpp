@@ -2,13 +2,13 @@
 #include <iostream>
 using namespace std;
 
-// [»ç¾ç¼­] ±âº»°ª Hp=100, Attack=10
-Knight::Knight() : _hp(100), _maxHp(100), _attack(10), _isCounterAttack(false) // ¹Ý°Ý¿©ºÎÃß°¡
+// [ì‚¬ì–‘ì„œ] ê¸°ë³¸ê°’ Hp=100, Attack=10
+Knight::Knight() : _hp(100), _maxHp(100), _attack(10), _isCounterAttack(false) // ï¿½Ý°Ý¿ï¿½ï¿½ï¿½ï¿½ß°ï¿½
 {
 
 }
 
-Knight::Knight(int hp) : _hp(hp), _maxHp(hp), _attack(10), _isCounterAttack(false)// ¹Ý°Ý¿©ºÎÃß°¡
+Knight::Knight(int hp) : _hp(hp), _maxHp(hp), _attack(10), _isCounterAttack(false)// ï¿½Ý°Ý¿ï¿½ï¿½ï¿½ï¿½ß°ï¿½
 {
 
 }
@@ -57,18 +57,15 @@ void Knight::OnDamaged(Knight* attacker, bool isCountAttack)
 	if (attacker == nullptr)
 		return;
 
-	// ³» Ã¼·Â ±ð´Â´Ù
+	// ë‚´ ì²´ë ¥ ê¹ŽëŠ”ë‹¤
 	int damage = attacker->GetAttackDamage();
 	AddHp(-damage);
 
-	// ¹Ý°Ý! => Àç±ÍÈ£ÃâµÇ±â¶§¹®¿¡...
-	// ±×·¡¼­ °£´ÜÈ÷ ÇÏ´Â°Ç  attacker->AddHP(-damage);
-
-	// ¹Ý°Ý ÇÑ¹ø¸¸ ÀÏ¾î³ªµµ·Ï Á¦¾î
+	// ë°˜ê²©!
 	if (!isCountAttack)
 	{
 		_isCounterAttack = true; 
-		attacker->OnDamaged(this, true);	// »ó´ë¿¡°Ô ¹Ý°Ý
-		_isCounterAttack = false;			// ¹Ý°Ý Á¾·á
+		attacker->OnDamaged(this, true);	
+		_isCounterAttack = false;			
 	}
 }
