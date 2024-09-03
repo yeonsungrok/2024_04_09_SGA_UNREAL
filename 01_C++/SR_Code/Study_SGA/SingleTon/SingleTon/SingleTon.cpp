@@ -1,21 +1,21 @@
 #include <iostream>
 
 using namespace std;
-/*
-SingleTon (ΩÃ±€≈Ê)             --------- ∞‘¿”¿Ã æ∆¥œ¥ı∂Ûµµ ¿¸π›¿˚¿∏∑Œ ¿¸√º ªÁøÎ«œ¥¬∞ÕµÈ¿Ã ¿÷¿∏¥œ ¬¸¡∂«“∞Õ ---------
-1. ¿¸ø™¿∏∑Œ ¡¢±Ÿ¿Ã ∞°¥…«ÿæﬂ«—¥Ÿ.
-2. «¡∑Œ±◊∑•ø° ¥‹ «œ≥™∏∏ ¡∏¿Á«ÿæﬂ«—¥Ÿ.
-3. µø¿˚«“¥Áµ«æÓæﬂ«—¥Ÿ. ----->>>>>   µ•¿Ã≈Õ ∂ßπÆø° µø¿˚«“¥Á«“ºˆ¿÷µµ∑œ heapøµø™ø° ∞°¥…«œµµ∑œ..
-*/
+// Singleton
+// 1. Ï†ÑÏó≠ÏúºÎ°ú Ï†ëÍ∑º Í∞ÄÎä•Ìï¥Ïïº ÌïúÎã§.
+// 2. ÌîÑÎ°úÍ∑∏Îû®Ïóê Îã® ÌïòÎÇòÎßå Ï°¥Ïû¨Ìï¥Ïïº ÌïúÎã§.
+// 3. ÎèôÏ†ÅÌï†Îãπ ÎêòÏñ¥Ïïº ÌïúÎã§.
 
 class SoundManager
 {
 private:
-	SoundManager() {}
+	SoundManager() {} // ÏÉùÏÑ±ÏûêÎ•º private ÏòÅÏó≠Ïóê ÎëêÎ©¥ Ïô∏Î∂ÄÏóêÏÑú Ìï®Î∂ÄÎ°ú ÏÉùÏÑ± Î™ªÌï®
 	~SoundManager() {}
 
 public:
-	// private ¡¢±Ÿ«“ ºˆ ¿÷¥¬ πÊπ˝ : public ∏‚πˆ«‘ºˆ
+	// privateÏóê Ï†ëÍ∑ºÌï† Ïàò ÏûàÎäî Î∞©Î≤ï : public Î©§Î≤ÑÌï®Ïàò
+	// Í∑∏ÎÉ• Î©§Î≤ÑÌï®ÏàòÎäî Ïô∏Î∂ÄÏóêÏÑú Ìò∏Ï∂úÌïòÎ†§Î©¥ Í∞ùÏ≤¥ ÌïÑÏöî
+	// Ï†ïÏ†Å Î©§Î≤ÑÌï®ÏàòÎ°ú Î≥ÄÍ≤Ω -> instanceÎèÑ Ï†ïÏ†ÅÎ©§Î≤ÑÎ≥ÄÏàòÏó¨Ïïº Ïì∏Ïàò ÏûàÏùå
 	
 	static void Create()
 	{
@@ -52,8 +52,8 @@ public:
 
 private:
 	static SoundManager* instance;
-	string _warriorSound = "øˆ∏ÆæÓ µÓ¿Â!";
-	string _archerSound = "æ∆√≥ µÓ¿Â!";
+	string _warriorSound = "ÏõåÎ¶¨Ïñ¥ Îì±Ïû•!";
+	string _archerSound = "ÏïÑÏ≤ò Îì±Ïû•!";
 
 };
 
@@ -72,17 +72,17 @@ int main()
 {
 	/*sm->PrintAllSound();*/
 
-	//SoundManager* sm2 = new SoundManager();   // ø‹∫Œø°º≠ ª˝º∫∏¯«œµµ∑œ ∏∑æ∆æﬂ«—¥Ÿ... ±◊∑°º≠? ø‹∫Œø°º≠ ª˝º∫∏¯«œµµ∑œ private
+	//SoundManager* sm2 = new SoundManager();  
 
 	/*delete sm;*/
 
-	SoundManager::Create();		// ª˝º∫µµ ∞°¿Â√≥¿Ωø°..
+	SoundManager::Create();		
 	/*SoundManager::GetInstance()->PrintAllSound();*/
 	Warrior* warrior = new Warrior();
 
 	delete warrior;
 
-	SoundManager::Delete();		// ªË¡¶µµ ∞°¿Â∏∂¡ˆ∏∑ø°..
+	SoundManager::Delete();		
 
 	return 0;
 }
