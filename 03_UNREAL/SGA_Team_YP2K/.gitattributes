@@ -1,1 +1,2 @@
 YP2K_Project02_Video_03.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
